@@ -6,6 +6,7 @@ It exposes the WSGI callable as a module-level variable named ``application``.
 For more information on this file, see
 https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 """
+#linha para resolver um problema de push no heroku
 
 import os
 
@@ -14,4 +15,5 @@ from dj_static import Cling
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pontos_turisticos.settings')
 
+application = get_wsgi_application()
 application = Cling(get_wsgi_application())
